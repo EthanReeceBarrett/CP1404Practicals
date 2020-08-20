@@ -3,7 +3,17 @@
 
 def main():
     numbers = get_numbers()
-    print(numbers)
+    usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
+                 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
+                 'bob']
+    # print(numbers)
+    print("the first number is {}".format(numbers[0]))
+    print("the last number is {}".format(numbers[-1]))
+    print("the smallest number is {}".format(min(numbers)))
+    print("the largest number is {}".format(max(numbers)))
+    average_num = average(numbers)
+    print("the average of the numbers is {}".format(average_num))
+    username_test(usernames)
 
 
 def get_numbers():
@@ -13,8 +23,21 @@ def get_numbers():
     amount_of_numbers = 5
     numbers = []
     for number in range(1, amount_of_numbers+1):
-        numbers.append(input("what is number {}? ".format(number)))
+        numbers.append(int(input("what is number {}? ".format(number))))
     return numbers
+
+
+def average(numbers):
+    average_num = sum(numbers)/len(numbers)
+    return average_num
+
+
+def username_test(usernames):
+    enter_username = input("Please enter your username: ")
+    if enter_username in usernames:
+        print("access granted")
+    else:
+        print("access denied")
 
 
 main()
