@@ -1,5 +1,5 @@
 """week 4 prac: quick pics
-produces a lines based on user input which show, ordered unique (per line) random numbers"""
+produces a lines based on user input which show, ordered unique (per line) random numbers as integers"""
 
 import random
 
@@ -9,7 +9,7 @@ MIN_NUMBER = 1
 
 
 def main():
-    number_of_lines = int(input("how many lines? "))
+    number_of_lines = int(input("how many quick picks? "))
     while number_of_lines < 1:
         print("invald amount of lines")
         number_of_lines = int(input("how many lines? "))
@@ -21,7 +21,8 @@ def main():
                 random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
             quick_picks.append(random_number)
         quick_picks.sort()
-        print(quick_picks)
-
+        # print(quick_picks)
+        # used answers to figure out how to convert to string
+        print(" ".join("{:3}".format(number_print) for number_print in quick_picks))
 
 main()
