@@ -12,8 +12,12 @@ __author__ = 'Lindsay Ward'
 MILES_TO_KM = 1.60934
 
 
+# TODO in the interests of time, i have studied the code relating to this instead of recreating my own -Ethan
+
+
 class MilesConverterApp(App):
     """ MilesConverterApp is a Kivy App for converting miles to kilometres """
+
     def build(self):
         """ build the Kivy app from the kv file """
         self.title = "Convert Miles to Kilometres"
